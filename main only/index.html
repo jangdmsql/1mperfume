@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- font-awsome: css 아이콘 사이트 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <!-- css 링크 -->
+    <link rel="stylesheet" href="./index.style.css" />
+    <!-- style-font 링크 -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- header section start -->
+    <header>
+      <!-- 헤더 로고  -->
+      <!-- span 태그: css에서 글자색을 별도로 설정하기 위함 -->
+      <!-- # 뒤에 세미콜론 입력해서 페이지 최상단으로 이동하는 것을 방지 -->
+      <a href="#;" class="logo">1m/fume <span>.</span></a>
+
+      <!-- nav 태그로 메뉴 바 생성 -->
+      <!-- 메뉴 바 요소를 누르면 id를 인식해 페이지 내 해당 위치로 이동 -->
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#search">search</a>
+        <a href="#best">best</a>
+        <a href="#notes">notes</a>
+        <a href="#myIncense">myIncense</a>
+      </nav>
+
+      <!-- # 뒤에 세미콜론 입력해서 페이지 최상단으로 이동하는 것을 방지 -->
+      <div class="icons">
+        <a href="pickBox.html;" class="fas fa-heart"></a>
+        <a href="cart.html" class="fas fa-shopping-cart"></a>
+        <a href="login.html" class="fas fa-user"></a>
+      </div>
+    </header>
+    <!-- header section end -->
+
+    <!-- home section start -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>scene of fragrance</h3>
+        <span> private </span>
+        <p>
+          심플하면서도 우아한 코롱은 엄선된 원료를 바탕으로 서로 다른 코롱과
+          함께 페어링 할 수 있도록 디자인되었습니다. 나만을 위한, 가장 잘
+          어울리는 향을 완성해 보세요.
+        </p>
+      </div>
+    </section>
+    <!-- home section end -->
+
+    <!-- search section start -->
+    <section class="search" id="search">
+      <h1 class="heading"><span> find your </span> own perfume</h1>
+      <div class="row">
+        <div class="video-container">
+          <!-- loop-반복재생, autoplay-자동재생, muted-음소거 -->
+          <video src="./index.images/about_vid.mp4" loop autoplay muted></video>
+          <h3>jo malone</h3>
+        </div>
+        <div class="content">
+          <h3>winter collection</h3>
+          <p>
+            따뜻한 마음을 전할 수 있는 시즌이 왔습니다. 크리스마스 코롱부터 홈
+            프레그런스까지, 리미티드 에디션으로 꾸려진 완벽한 크리스마스 기프트
+            컬렉션을 소개합니다.
+          </p>
+          <p>
+            멋진 선물을 나누는 시간을 함께하며, 크리스마스 시즌을 맞이하세요.
+            자그마한 크리스마스 양말을 채우는 리틀 럭셔리부터 럭셔리한 기프트
+            세트까지. 모두를 위한 선물이 준비되어 있습니다.
+          </p>
+          <a href="search_dior.html" class="btn">find more</a>
+        </div>
+      </div>
+    </section>
+    <!-- search section end -->
+
+    <!-- best section start -->
+    <section class="best" id="best">
+      <h1 class="heading">best <span>products</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="./index.images/product-bvlgari.png" alt="" />
+            <div class="icons">
+              <a href="#;" class="fas fa-heart" id="dibs"></a>
+              <a href="best.html" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>불가리- 맨 우드 에센스 오 드 퍼퓸</h3>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="./index.images/img-1.jpg" alt="" />
+            <div class="icons">
+              <a href="#;" class="fas fa-heart" id="dibs"></a>
+              <a href="best.html" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>Jo Malone-잉글리쉬 페어 앤 프리지아</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./index.images/product-creed.png" alt="" />
+            <div class="icons">
+              <a href="#;" class="fas fa-heart" id="dibs"></a>
+              <a href="best.html" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>크리드-그린 아이리쉬 트위드</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./index.images/product-byredo.jpg" alt="" />
+            <div class="icons">
+              <a href="#;" class="fas fa-heart" id="dibs"></a>
+              <a href="best.html" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>바이레도-집시 워터</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./index.images/product-lelabo.jpg" alt="" />
+            <div class="icons">
+              <a href="#;" class="fas fa-heart" id="dibs"></a>
+              <a href="best.html" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>르라보-상탈33</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./index.images/product-chanel.jpg" alt="" />
+            <div class="icons">
+              <a href="#;" class="fas fa-heart" id="dibs"></a>
+              <a href="best.html" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>샤넬-N°5 로 오 드 뚜왈렛</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./index.images/product-tomford.jpg" alt="" />
+            <div class="icons">
+              <a href="#;" class="fas fa-heart" id="dibs"></a>
+              <a href="best.html" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>톰포드-오드우드</h3>
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="./index.images/product-diptyque.jpg" alt="" />
+            <div class="icons">
+              <a href="#;" class="fas fa-heart" id="dibs"></a>
+              <a href="best.html" class="fas fa-share"></a>
+            </div>
+          </div>
+          <div class="content">
+            <h3>딥디크-도 손 오 드 퍼퓸</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- best section end -->
+
+    <!-- notes section start  -->
+    <section class="notes" id="notes">
+      <h1 class="heading">incense <span> notes </span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="icons">
+            <a href="notes.html" class="fas fa-heart"></a>
+          </div>
+          <div class="notename">
+            <h3>시트러스|Citrus</h3>
+          </div>
+          <p>
+            시트러스 향은 산뜻하고 풍미가 넘치며, 활력과 에너지를 부여해 줍니다.
+            <br />
+            처음 뿌리는 그 순간부터 생기있는 아로마로 기분 좋은 자극을
+            선사합니다. <br />
+            청량한 시트러스 향으로 오감을 깨우고 공간에 활력을 더해보세요.
+          </p>
+          <div class="note">
+            <img src="./index.images/pic-1.jpg" alt="" />
+          </div>
+          <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+          <div class="icons">
+            <a href="notes.html" class="fas fa-heart"></a>
+          </div>
+          <div class="notename">
+            <h3>우디|Woody</h3>
+          </div>
+          <p>
+            우디향은 관능적이면서도 풍부한 향으로, 변치않는 우아함과 지금 이
+            순간에 몰입하는 듯한 느낌을 선사합니다. <br />
+            따뜻하고 크리미한 나무향부터 가볍고 스모키한 노트까지, 아늑한
+            편안함과 매력적인 에너지로 공간을 채워보세요.
+          </p>
+          <div class="note">
+            <img src="./index.images/pic-2.jpg" alt="" />
+          </div>
+          <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+          <div class="icons">
+            <a href="notes.html" class="fas fa-heart"></a>
+          </div>
+          <div class="notename">
+            <h3>블랙베리|Blackberry</h3>
+          </div>
+          <p>
+            순수의 향. 블랙베리를 따던 어린 시절의 추억, 블랙베리로 물든 입술과
+            손. <br />
+            이제 막 수확한 월계수 잎의 신선함에 톡 쏘는 블랙베리 과즙을
+            가미하였습니다. <br />
+            매력적이고 생기 넘치는 상쾌한 느낌의 향입니다.
+          </p>
+
+          <div class="note">
+            <img src="./index.images/pic-3.jpg" alt="" />
+          </div>
+          <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+          <div class="icons">
+            <a href="notes.html" class="fas fa-heart"></a>
+          </div>
+          <div class="notename">
+            <h3>씨솔트|seasolt</h3>
+          </div>
+          <p>
+            바람부는 해안을 따라 걸으며 일상을 벗어나보세요. 하얗게 부서지는
+            파도, 소금기를 머금은 신선한 바다 공기. <br />
+            험준한 절벽에서 느껴지는 투박한 자연의 향기와 어우러져 자유롭고
+            활기찬 에너지와 즐거움이 가득합니다.
+          </p>
+
+          <div class="note">
+            <img src="./index.images/pic-4.jpg" alt="" />
+          </div>
+          <span class="fas fa-quote-right"></span>
+        </div>
+      </div>
+    </section>
+    <!-- notes section end  -->
+
+    <!-- myincense head section start  -->
+    <!-- 메뉴바 추가  -->
+    <h1 class="heading1">My <span> Incense </span></h1>
+    <section class="myIncense" id="myIncense">
+      <div class="pre">
+        <h3>오늘은 어떤 향기를 입으시겠어요?</h3>
+        <p>
+          '나의 향수는 나의 일부가 되고 아무도 그것을 모방할 수 없다’ <br />
+          현대 사회에서 향수란 나의 정체성을 의미합니다. 나에게 맞는 향수를
+          찾아가는 것은 나의 정체성을 찾아가는 과정이기도 합니다.
+        </p>
+        <a href="myIncense.html" class="btn">view more</a>
+      </div>
+    </section>
+    <!-- myincense head section end  -->
+
+    <!-- 찜하기 기능을 위한 스크립트-->
+    <script src="index_js.js"></script>
+  </body>
+</html>

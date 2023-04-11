@@ -1,0 +1,415 @@
+/* root 가상 클래스 사용: 요소 개수 축소, 정확성과 유지보수 높임
+id 선택자나 class 선택자로 사용할 수 없는 요소들을 선택하는 선택자 */
+:root {
+  --brown: rgba(122, 93, 59, 0.705);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* box-sizing: 박스 크기 계산 기준 */
+  font-family: "Nanum Myeongjo", serif;
+  outline: none;
+  border: none; /* outline: 모든 외곽선의 속성 */
+  text-decoration: none;
+  text-transform: capitalize; /*단어의 첫 번째 글자만 대문자로 변경*/
+  transition: 0.2s linear; /*일정한 속도로 요소의 속성값 변화*/
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth; /*스크롤 이동*/
+  scroll-padding-top: 6rem;
+  overflow-x: hidden; /*부모요소의 범위를 넘어가는 자식 요소의 부분: 보이지 않도록 처리*/
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  color: #333;
+  padding: 1rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  background: rgba(197, 110, 38, 0.123);
+}
+
+.heading span {
+  color: var(--brown);
+  /* 속성: var(--변수명  ) -> 색깔 default값 지정 */
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 5rem;
+  background: #333;
+  color: #fff;
+  padding: 0.9rem 3.5rem;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover {
+  background: var(--brown);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /*가로 축을 기준으로 좌우에 대한 정렬을 관장: 요소들 사이에 일정한 간격을 둠*/
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 3rem;
+  color: #333;
+  font-weight: bolder;
+}
+
+header .logo span {
+  color: var(--brown);
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: #666;
+}
+
+header .navbar a:hover {
+  color: var(--brown);
+}
+
+header .icons a {
+  font-size: 2.5rem;
+  color: #333;
+  margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+  color: var(--brown);
+}
+
+header #toggler {
+  display: none;
+}
+
+header .fa-bars {
+  font-size: 3rem;
+  color: #333;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer; /*요소 위에 마우스가 올라갔을 때: pointer로 표시*/
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./index.images/home-bg6.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.home .content {
+  max-width: 50rem;
+}
+
+.home .content h3 {
+  font-size: 5rem;
+  color: rgb(250, 248, 248);
+}
+
+.home .content span {
+  font-size: 3rem;
+  color: rgb(66, 56, 47);
+  padding: 1rem 0;
+  line-height: 1.5; /*줄 높이*/
+}
+
+.home .content p {
+  font-size: 1.3rem;
+  color: black;
+  padding: 1rem 0;
+  line-height: 1.5;
+}
+
+.search .row {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /*행과 열 사이의 간격*/
+  flex-wrap: wrap; /*다음 줄에 정렬하는 방식. 부모 요소 display:flex; 와 함께 기재*/
+  padding: 2rem 0;
+  padding-bottom: 3rem;
+}
+
+.search .row .video-container {
+  flex: 1 1 40rem;
+  position: relative;
+}
+
+.search .row .video-container video {
+  width: 100%;
+  border: 1.5rem solid #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  height: 100%;
+  object-fit: cover; /*대체 요소의 컨텐츠 크기 지정- viedo, image*/
+}
+
+.search .row .video-container h3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /*좌우(수평 방향)의 이동 거리 값 지정*/
+  font-size: 3rem;
+  background: #fff;
+  width: 100%;
+  padding: 1rem 2rem;
+  text-align: center;
+  mix-blend-mode: screen; /*이미지 등의 요소가 중첩될 경우 혼합 방식 지정*/
+}
+
+.search .row .content {
+  flex: 1 1 40rem;
+}
+
+.search .row .content h3 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.search .row .content p {
+  font-size: 1.5rem;
+  color: #999;
+  padding: 0.5rem 0;
+  padding-top: 1rem;
+  line-height: 1.5;
+}
+
+.best .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.best .box-container .box {
+  flex: 1 1 20rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.best .box-container .box .image {
+  position: relative;
+  text-align: center;
+  padding-top: 2rem;
+  overflow: hidden;
+}
+
+.best .box-container .box .image img {
+  height: 25rem;
+}
+
+.best .box-container .box:hover .image img {
+  transform: scale(1.1); /*요소 확대*/
+}
+
+.best .box-container .box .image .icons {
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.best .box-container .box:hover .image .icons {
+  bottom: 0;
+}
+
+.best .box-container .box .image .icons a {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  width: 50%;
+  background: var(--brown);
+  color: #fff;
+}
+
+.best .box-container .box .image .icons a:hover {
+  background: #333;
+}
+
+.best .box-container .box .content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.best .box-container .box .content h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.notes .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.notes .box-container .box {
+  flex: 1 1 30rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  padding: 3rem 2rem;
+  position: relative;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.notes .box-container .box .fa-quote-right {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  font-size: 6rem;
+  color: var(--brown);
+}
+
+.notes .box-container .box p {
+  color: #999;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+}
+
+.notes .box-container .box .notename {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.notes .box-container .box .note img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.notes .box-container .box .notename h3 {
+  font-size: 2.6rem;
+  color: #333;
+}
+
+.notes .box-container .box .note span {
+  font-size: 1.5rem;
+  color: #999;
+}
+
+.notes .box-container .box .icon {
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center; /*요소를 컨테이너 중앙으로 정렬*/
+  align-items: center;
+  color: white;
+}
+
+.notes .box-container .box:hover {
+  transform: scale(1.1);
+}
+
+.notes .box-container .box .icons {
+  position: absolute;
+  bottom: -7rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.notes .box-container .box:hover .icons {
+  bottom: 0;
+}
+
+.notes .box-container .box .icons a {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notes .box-container .box:hover .icons a {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  width: 100%;
+  background: var(--brown);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notes .box-container .box .icons a:hover {
+  background: #333;
+}
+
+.myIncense {
+  align-items: center;
+  min-height: 50vh;
+  background: url(./index.images/home-bg7.png) no-repeat;
+  background-size: contain;
+}
+
+.myIncense .pre {
+  max-width: 60rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+  padding: 5.3rem;
+}
+
+.myIncense .pre h3 {
+  font-size: 3rem;
+  color: black;
+}
+
+.myIncense .pre p {
+  font-size: 1.5rem;
+  color: black;
+  line-height: 1.5;
+}
+
+.heading1 {
+  text-align: center;
+  font-size: 4rem;
+  color: #333;
+  padding: 1rem;
+  margin-top: 4rem;
+  background: rgba(197, 110, 38, 0.123);
+}
+
+.heading1 span {
+  color: var(--brown);
+}
